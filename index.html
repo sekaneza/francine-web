@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<title>EXERCISES</title>
+<body>
+	<form action="nip.php"method="POST">
+	ID:<input type="text" name="ID"value=""><br>
+FIRSTNAME:<input type="text" name="FIRSTNAME"value=""><br>
+LASTNAME:<input type="text" name="LASTNAME"value=""><br>
+
+ACADEMIC_YEAR:<select name="ACADEMIC_YEAR">
+             <option>2000</option>
+             <option>2001</option>
+             <option>2002</option>
+             <option>2003</option>
+         </select><br>
+SEX:<input type="radio" name="SEX"value="male">male<br>
+   :<input type="radio" name="SEX"value="female">female<br>
+<input type="submit" name="submit"value="submit"><br>
+</form>
+<?php
+if(isset($_REQUEST['submit'])){
+	$ID=$_REQUEST['ID'];
+$FIRSTNAME=$_REQUEST['FIRSTNAME'];
+$LASTNAME=$_REQUEST['LASTNAME'];
+$ACADEMIC_YEAR=$_REQUEST['ACADEMIC_YEAR'];
+$SEX=$_REQUEST['SEX'];
+echo" ID: "." $ID <br>";
+echo" FIRSTNAME:"."$FIRSTNAME<br>";
+echo" LASTNAME:"."$LASTNAME<br>";
+echo" ACADEMIC_YEAR:"."$ACADEMIC_YEAR<br>";
+echo" SEX: "."$SEX<br>";
+}
+?>
+</body>
+</html>
